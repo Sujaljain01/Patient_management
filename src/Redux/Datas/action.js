@@ -10,7 +10,8 @@ export const CreateReport = (data) => async (dispatch) => {
       data
     );
     console.log(res);
-    return res.data;
+    return res.data;  
+    
     // dispatch({
     //   type: types.CREATE_REPORT_SUCCESS,
     //   payload: {

@@ -38,7 +38,6 @@ const Check_Appointment = () => {
   if (data?.user.userType !== "doctor") {
     return <Navigate to={"/dashboard"} />;
   }
-
   return (
     <>
       <div className="container">
