@@ -1,6 +1,8 @@
-/* *********************************  TOP BAR STYLE PART  ****************************************/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.MainDiv {
+********************************* TOP BAR STYLE PART *************************************** .MainDiv {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -37,7 +39,7 @@
   border: none;
   font-size: 1.2rem;
   padding-left: 10px;
-  background-color:#80CED7;
+  background-color: #80CED7;
 }
 
 .Hideshow {
@@ -57,11 +59,13 @@
 .container {
   display: flex;
   gap: 2rem;
-  background-color: rgba(131, 220, 255, 0.29);
+  /* background-color: rgba(131, 220, 255, 0.29); */
+
   width: 100%;
   /* border: 2px solid green; */
   width: 100%;
 }
+
 main {
   width: 100%;
   padding: 20px;
@@ -73,13 +77,15 @@ main {
 }
 
 .sidebar {
-  background: #80CED7;
+  /* background: #80CED7; */
+
   color: #000;
   height: 100vh;
-  transition: all 0.5s;
+  transition: all 0.2s ease-in-out;
   position: sticky;
   top: 0;
 }
+
 .top_section {
   display: flex;
   align-items: center;
@@ -90,11 +96,13 @@ main {
 .logo {
   font-size: 20px;
 }
+
 .bars {
   display: flex;
   font-size: 25px;
   margin-left: 50px;
 }
+
 .link {
   display: flex;
   color: #000;
@@ -105,15 +113,18 @@ main {
   align-items: center;
   transition: all 0.5s;
 }
+
 .link:hover {
   background: #007EA7;
   color: #000;
   transition: all 0.5s;
 }
+
 .active {
   background: #80CED7;
   color: #000;
 }
+
 .icon,
 .link_text {
   font-size: 15px;
@@ -148,6 +159,7 @@ main {
 .patientDetails {
   margin-top: 5rem;
 }
+
 .patientDetails h1 {
   margin-bottom: 1rem;
   color: rgb(184 191 234);
@@ -185,6 +197,7 @@ main {
   .maindiv {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .commondiv {
     gap: 2.5rem;
   }
@@ -194,9 +207,11 @@ main {
   .maindiv {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .commondiv {
     gap: 4rem;
   }
+
   .container {
     width: 100%;
   }
@@ -218,16 +233,20 @@ main {
   .hidesidebar {
     display: none;
   }
+
   .showsidebar {
     display: block;
   }
+
   .Icons {
     font-size: 1.3rem;
   }
+
   .IconsDiv {
     gap: 15px;
     border: 1px solid;
   }
+
   .MainDiv {
     border: 1px solid;
   }

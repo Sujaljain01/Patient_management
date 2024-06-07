@@ -5,17 +5,18 @@ import "./CSS/Precautions.css";
 
 const Precautions = ({ healthIssue: propHealthIssue }) => {
     const { healthIssue: paramHealthIssue } = useParams();
+    const patientId = 1;
     const healthIssue = propHealthIssue || paramHealthIssue;
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => { 
+    useEffect(() => {
         const fetchPrecautions = async () => {
             try {
                 const response = await axios.get(`http://localhost:4000/api/precautions/${patientId}`);
                 setData(response.data);
-            } catch (error) { 
+            } catch (error) {
                 setError('Error fetching precautions');
             } finally {
                 setLoading(false);

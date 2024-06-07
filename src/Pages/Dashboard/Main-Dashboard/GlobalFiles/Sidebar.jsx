@@ -33,16 +33,16 @@ const Sidebar = () => {
   return (
     <>
       <div>
-        <div style={{ width: isOpen ? "200px" : "70px" }} className={`sidebar`}>
+        <div style={{ width: isOpen ? "200px" : "70px" }} className={`sidebar bg-blue-600`}>
           <div className="top_section">
-            <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
+            <h1 style={{ display: isOpen ? "block" : "none" }} className="logo text-white font-extrabold">
               HealthSync
             </h1>
             <div
               style={{ marginLeft: isOpen ? "50px" : "0px" }}
               className="bars"
             >
-              <ImMenu onClick={toggle} style={{ cursor: "pointer" }} />
+              <ImMenu onClick={toggle} style={{ cursor: "pointer" }} className="text-white" />
             </div>
           </div>
           <div className="bottomSection">
@@ -58,89 +58,89 @@ const Sidebar = () => {
               </div>
             </Link>
 
-            
-            
-              <Link
-                className="link"
-                activeclassname="active"
-                to={"/addpatient"}
-              >
-                <div className="icon">
-                  <FaHospitalUser className="mainIcon" />
-                </div>
-                <div
-                  style={{ display: isOpen ? "block" : "none" }}
-                  className="link_text"
-                >
-                  Add Patient
-                </div>
-              </Link>
-            
 
-            
-              <Link
-                className="link"
-                activeclassname="active"
-                to={"/bookappointment"}
+
+            <Link
+              className="link"
+              activeclassname="active"
+              to={"/addpatient"}
+            >
+              <div className="icon">
+                <FaHospitalUser className="mainIcon" />
+              </div>
+              <div
+                style={{ display: isOpen ? "block" : "none" }}
+                className="link_text"
               >
-                <div className="icon">
-                  <BsBookmarkPlus className="mainIcon" />
-                </div>
-                <div
-                  style={{ display: isOpen ? "block" : "none" }}
-                  className="link_text"
-                >
-                  Appointments
-                </div>
-              </Link>
-           
-           
-              <Link className="link" activeclassname="active" to={"/reports"}>
-                <div className="icon">
-                  <TbReportMedical className="mainIcon" />
-                </div>
-                <div
-                  style={{ display: isOpen ? "block" : "none" }}
-                  className="link_text"
-                >
-                  Reports
-                </div>
-              </Link>
-            
-            
-              <Link
-                className="link"
-                activeclassname="active"
-                to={"/checkappointment"}
+                Add Patient
+              </div>
+            </Link>
+
+
+
+            <Link
+              className="link"
+              activeclassname="active"
+              to={"/bookappointment"}
+            >
+              <div className="icon">
+                <BsBookmarkPlus className="mainIcon" />
+              </div>
+              <div
+                style={{ display: isOpen ? "block" : "none" }}
+                className="link_text"
               >
-                <div className="icon">
-                  <BsFillBookmarkCheckFill className="mainIcon" />
-                </div>
-                <div
-                  style={{ display: isOpen ? "block" : "none" }}
-                  className="link_text"
-                >
-                  Appointments
-                </div>
-              </Link>
-            
-           
-              <Link
-                className="link"
-                activeclassname="active"
-                to={"/createslip"}
+                Appointments
+              </div>
+            </Link>
+
+
+            <Link className="link" activeclassname="active" to={"/reports"}>
+              <div className="icon">
+                <TbReportMedical className="mainIcon" />
+              </div>
+              <div
+                style={{ display: isOpen ? "block" : "none" }}
+                className="link_text"
               >
-                <div className="icon">
-                  <BiDetail className="mainIcon" />
-                </div>
-                <div
-                  style={{ display: isOpen ? "block" : "none" }}
-                  className="link_text"
-                >
-                  Create Report
-                </div>
-              </Link>
-           
+                Reports
+              </div>
+            </Link>
+
+
+            <Link
+              className="link"
+              activeclassname="active"
+              to={"/checkappointment"}
+            >
+              <div className="icon">
+                <BsFillBookmarkCheckFill className="mainIcon" />
+              </div>
+              <div
+                style={{ display: isOpen ? "block" : "none" }}
+                className="link_text"
+              >
+                Appointments
+              </div>
+            </Link>
+
+
+            <Link
+              className="link"
+              activeclassname="active"
+              to={"/createslip"}
+            >
+              <div className="icon">
+                <BiDetail className="mainIcon" />
+              </div>
+              <div
+                style={{ display: isOpen ? "block" : "none" }}
+                className="link_text"
+              >
+                Create Report
+              </div>
+            </Link>
+
 
             <Link
               className="LogOutPath link"

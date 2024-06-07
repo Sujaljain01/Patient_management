@@ -22,13 +22,13 @@ const AllRoutes = () => {
   return (
     <>
       <Routes>
-      {/* <Route path="/" element={<Add_Patient />} /> */}
-      <Route path="/" element={<CreatePatientProfile />} />
+        {/* <Route path="/" element={<ViewAndUpdatePatient />} /> */}
+        {/* <Route path="/" element={<Add_Patient />} /> */}
+        <Route path="/" element={<CreatePatientProfile />} />
         <Route path="/Gemini" element={<Gemini />} />
         {/* <Route path="/" element={<AddAppointments />} /> */}
         {/* <Route path="/" element={<FrontPage />} /> */}
         {/* <Route path="/" element={<Precautions healthIssue="Heart Attack" />} /> */}
-        <Route path="/" element={<ViewAndUpdatePatient />} />
         {/* <Route path="/dashboard" element={<FrontPage />} /> */}
         ******************** hospital_Management Part *************************
         <Route path="/reports" element={<AllReport />} />
