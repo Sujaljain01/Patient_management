@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
@@ -12,5 +15,6 @@ body {
 
 .inputdiv input::placeholder {
   font-family: "Poppins", sans-serif;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }

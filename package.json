@@ -9,10 +9,12 @@
     "antd": "^5.0.3",
     "axios": "^1.7.2",
     "cors": "^2.8.5",
+    "lucide-react": "^0.390.0",
     "react": "^18.2.0",
     "react-big-calendar": "^1.12.2",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.4",
@@ -46,5 +48,8 @@
       "last 1 safari version"
     ],
     "proxy": "http://localhost:3001"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
   }
 }

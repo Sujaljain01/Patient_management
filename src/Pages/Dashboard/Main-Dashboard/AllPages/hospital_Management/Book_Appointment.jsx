@@ -6,6 +6,9 @@ import { AddPatients, CreateBooking } from "../../../../../Redux/Datas/action";
 import Sidebar from "../../GlobalFiles/Sidebar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./CSS/Book_appointment.css";
+import './CSS/CreatePatientProfile.css'
+
 const notify = (text) => toast(text);
 
 const Book_Appointment = () => {
@@ -55,16 +58,16 @@ const Book_Appointment = () => {
   return (
     <>
       <ToastContainer />
-      <div className="container">
+      <div className="container  p-4">
         <Sidebar />
-        <div className="AfterSideBar">
+        <div className="AfterSideBar bg-blue-300 p-6 rounded-lg shadow-lg">
           <div className="Main_Add_Doctor_div">
-            <h1>Book Appointment</h1>
-            <form onSubmit={HandleOnsubmitAppointment}>
-              {/* Name PlaceHolder */}
+            <h1 className="text-2xl font-bold mb-4 text-gray-800">Book Appointment</h1>
+            <form onSubmit={HandleOnsubmitAppointment} className="space-y-4">
+              {/* Name Placeholder */}
               <div>
-                <label>Patient Name</label>
-                <div className="inputdiv">
+                <label className="text-red-400 font-semibold">Patient Name</label>
+                <div className="inputdiv mt-1">
                   <input
                     type="text"
                     placeholder="First Name"
@@ -72,13 +75,14 @@ const Book_Appointment = () => {
                     value={BookAppoint.patientName}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   />
                 </div>
               </div>
-              {/* AGE PLACEHOLDER  */}
+              {/* Age Placeholder */}
               <div>
-                <label>Age</label>
-                <div className="inputdiv">
+                <label className="font-semibold">Age</label>
+                <div className="inputdiv mt-1">
                   <input
                     type="number"
                     placeholder="Age"
@@ -86,18 +90,20 @@ const Book_Appointment = () => {
                     value={BookAppoint.age}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   />
                 </div>
               </div>
-              {/* GENDER PLACEHOLDER  */}
+              {/* Gender Placeholder */}
               <div>
-                <label>Gender</label>
-                <div className="inputdiv">
+                <label className="font-semibold">Gender</label>
+                <div className="inputdiv mt-1">
                   <select
                     name="gender"
                     value={BookAppoint.gender}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   >
                     <option value="Choose Blood Group">Select Gender</option>
                     <option value="Male">Male</option>
@@ -106,10 +112,10 @@ const Book_Appointment = () => {
                   </select>
                 </div>
               </div>
-              {/* MOBILE PLACEHOLDER */}
+              {/* Mobile Placeholder */}
               <div>
-                <label>Contact Number</label>
-                <div className="inputdiv">
+                <label className="font-semibold">Contact Number</label>
+                <div className="inputdiv mt-1">
                   <input
                     type="number"
                     placeholder="Number"
@@ -117,12 +123,14 @@ const Book_Appointment = () => {
                     value={BookAppoint.mobile}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   />
                 </div>
               </div>
+              {/* Email Placeholder */}
               <div>
-                <label>Email</label>
-                <div className="inputdiv">
+                <label className="font-semibold">Email</label>
+                <div className="inputdiv mt-1">
                   <input
                     type="email"
                     placeholder="example@email.com"
@@ -130,13 +138,14 @@ const Book_Appointment = () => {
                     value={BookAppoint.email}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   />
                 </div>
               </div>
-              {/* PROBLEM PLACEHOLDER */}
+              {/* Problem Placeholder */}
               <div>
-                <label>Type of Disease</label>
-                <div className="inputdiv">
+                <label className="font-semibold">Type of Disease</label>
+                <div className="inputdiv mt-1">
                   <select
                     name="disease"
                     value={BookAppoint.disease}
@@ -144,6 +153,7 @@ const Book_Appointment = () => {
                       HandleAppointment(e);
                     }}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   >
                     <option value="Choose Blood Group">Select Disease</option>
                     {CommonProblem.map((ele, i) => {
@@ -156,14 +166,10 @@ const Book_Appointment = () => {
                   </select>
                 </div>
               </div>
-
-              {/* ENTER SAMPLE DISEASE */}
-
-              {/* ADDRESS SECTION  */}
-
+              {/* Address Section */}
               <div>
-                <label>Address</label>
-                <div className="inputdiv">
+                <label className="font-semibold">Address</label>
+                <div className="inputdiv mt-1">
                   <input
                     type="text"
                     placeholder="Address line 1"
@@ -171,19 +177,20 @@ const Book_Appointment = () => {
                     value={BookAppoint.address}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   />
                 </div>
               </div>
-              {/* DEPARTMENT SECTION */}
-
+              {/* Department Section */}
               <div>
-                <label>Department</label>
-                <div className="inputdiv">
+                <label className="font-semibold">Department</label>
+                <div className="inputdiv mt-1">
                   <select
                     name="department"
                     value={BookAppoint.department}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   >
                     <option value="">Select</option>
                     <option value="Cardiology">Cardiology</option>
@@ -197,10 +204,10 @@ const Book_Appointment = () => {
                   </select>
                 </div>
               </div>
-              {/* APPOINTMENT DATE  */}
+              {/* Appointment Date */}
               <div className="dateofAppointment">
-                <p>Date and Time </p>
-                <div className="inputdiv">
+                <p className="font-semibold">Date and Time</p>
+                <div className="inputdiv mt-1 flex space-x-4">
                   <input
                     type={"date"}
                     placeholder="Choose Date"
@@ -208,6 +215,7 @@ const Book_Appointment = () => {
                     value={BookAppoint.date}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   />
                   <input
                     type={"time"}
@@ -216,11 +224,11 @@ const Book_Appointment = () => {
                     value={BookAppoint.time}
                     onChange={HandleAppointment}
                     required
+                    className="w-full p-2 border border-gray-300 rounded-lg"
                   />
                 </div>
               </div>
-
-              <button type="submit" className="book_formsubmitbutton">
+              <button type="submit" className="book_formsubmitbutton bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600">
                 {Loading ? "Loading..." : "Book Appointment"}
               </button>
             </form>
